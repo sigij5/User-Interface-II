@@ -112,9 +112,10 @@ header nav a:hover{
     justify-content:space-around;
 }
 .section2 div{
-    width:150px;
+    /* width:150px;
     height:150px;
-    margin:20px;
+    margin:20px; */
+    width:20%;
 }
 
 
@@ -125,14 +126,15 @@ header nav a:hover{
     justify-content:space-around;
 }
 .section3 div{
-    width:150px;
-    height:200px;
-    margin:20px;
+    /* width:150px;
+    height:200px;*/
+    margin:20px 20px 0px 20px;
+    width:20%;
 }
 div.projects img{
     object-fit: contain;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 80%;
 }
 .section3 div.projects{
     display:flex;
