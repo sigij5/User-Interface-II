@@ -26,8 +26,146 @@ font-family:'EB Garamond', serif;
 /*general styles*/
 body{
     line-height:1.5;
-    background-color: pink;
+    background-color: black;
+    color:white;
 }
-section{
-    padding:4% 0;
+p{
+    font-size: small;
+}
+nav.header a{
+    background-color:darkgreen;
+}
+nav.header a:hover{
+    background-color:lightgreen;
+    cursor: pointer;
+}
+a{
+    padding:1%;
+}
+.button button{
+cursor:pointer;
+}
+.button{
+    background-color: inherit;
+}
+
+/*header styles*/
+header{
+    display:flex;
+    flex-direction:column;
+    background-color: grey;
+}
+header h1{
+    font-size: large;
+}
+header nav{
+    display:flex;
+    height: 5vh;
+}
+header nav a{
+    background-color:darkgreen;
+    border: 2px solid red;
+}
+header nav a:hover{
+    background-color:lightgreen;
+}
+
+
+/*section 1 styles*/
+
+.section1{
+    display:flex;
+    margin: 4%;
+    flex-flow:row wrap;
+    justify-content: space-around;
+}
+#headshot{
+    width:40%;
+    height:100%;
+    display:flex;
+}
+#headshot img{
+    object-fit: contain;
+    width:80%;
+}
+.maintext{
+    width:40%;
+    display:flex;
+    flex-flow:column wrap;
+    align-items:flex-start;
+    justify-content: flex-end;
+}
+.maintext a{
+    width:40%;
+}
+#description{
+    width:50%;
+    object-fit: contain;
+    max-height: 100%;
+}
+
+
+/*section 2 styles*/
+.section2{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-around;
+}
+.section2 div{
+    width:150px;
+    height:150px;
+    margin:20px;
+}
+
+
+/*section 3 styles*/
+.section3{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-around;
+}
+.section3 div{
+    width:150px;
+    height:200px;
+    margin:20px;
+}
+div.projects img{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+.section3 div.projects{
+    display:flex;
+    flex-direction: row;
+}
+.section3 div.projects p{
+    width: 10%;
+    display:flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+
+
+/*footer styles*/
+
+footer{
+    background-color: grey;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+footer div{
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+footer nav a{
+    color:Cyan;
+}
+footer .button{
+    padding:0%;
+    margin:0%;
 }
