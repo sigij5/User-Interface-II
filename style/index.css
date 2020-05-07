@@ -1,1 +1,156 @@
 /* Add CSS styling here */
+
+html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+table, caption, tbody, tfoot, thead, tr, th, td,  
+article, aside, canvas, details, embed,  
+figure, figcaption, footer, header, hgroup,  
+menu, nav, output, ruby, section, summary,  
+time, mark, audio, video {  
+margin: 0;  
+padding: 0;  
+border: 0;  
+font-size: 62.5%;  
+font: inherit; 
+color: goldenrod; 
+vertical-align: baseline;  
+box-sizing:border-box;
+font-family:'EB Garamond', serif;
+}
+
+/*general styles*/
+header h1{
+    font-size:3rem;
+}
+body{
+    line-height:1.5;
+    background-color: black;
+    color:white;
+}
+p{
+    font-size: 1.6rem;
+}
+nav.header a{
+    background-color:darkgreen;
+}
+nav.header a:hover{
+    background-color:lightgreen;
+    cursor: pointer;
+}
+a{
+    padding:1%;
+}
+.button button{
+cursor:pointer;
+}
+.button{
+    background-color: inherit;
+}
+
+/*header styles*/
+header{
+    display:flex;
+    flex-direction:column;
+    background-image:url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9& auto=format&fit=crop&w=900&q=60');
+    background-size:stretch;
+    background-repeat: no-repeat;
+
+}
+header nav{
+    display:flex;
+    height: 5vh;
+}
+header nav a{
+    background-color:darkgreen;
+    border: 2px solid red;
+}
+header nav a:hover{
+    background-color:lightgreen;
+}
+
+
+/*section 1 styles*/
+
+.section1{
+    display:flex;
+    margin:2% 0%;
+    flex-flow:row wrap;
+    border:1px solid green;
+}
+.section1 div{
+    border:1px solid red;
+}
+div#headshot{
+    width:40%;
+    height:100%;
+    display:flex;
+}
+#headshot img{
+    object-fit: contain;
+}
+div.maintext h2{
+    font-size: 2rem;
+}
+.maintext{
+    width:40%;
+    display:flex;
+    flex-flow:column wrap;
+    align-items:flex-start;
+    justify-content: flex-end;
+    margin-left:0px;
+}
+#description{
+    width:100%;
+    object-fit: contain;
+    max-height: 100%;
+}
+
+
+/*section 2 styles*/
+section.section2{
+    height:40%;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+}
+section.section2 div{
+    width:25%;
+    display:flex;
+    flex-flow: column-reverse wrap;
+    align-items:center;
+    margin-bottom:5%; 
+ } 
+
+.section2 div img{
+    width: 200px;
+    height: 200px; 
+}
+
+/*footer styles*/
+
+footer{
+    background-color:grey;
+    display:flex;
+    flex-direction: column;
+}
+footer div{
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+footer nav a{
+    color:Cyan;
+}
+button{
+    margin:0%;
+}
+footer h2{
+    font-size:2rem;
+}
