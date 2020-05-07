@@ -25,9 +25,8 @@ font-family:'EB Garamond', serif;
 }
 
 /*general styles*/
-#title{
+header h1{
     font-size:300%;
-    color: goldenrod;
 }
 body{
     line-height:1.5;
@@ -144,14 +143,12 @@ div.projects img{
 .section3 div.projects{
     display:flex;
     flex-direction: row-reverse;
-} */
-
-
+} 
 
 /*footer styles*/
 
 footer{
-    background-color: grey;
+    background-color:grey;
     display:flex;
     flex-direction: column;
 }
@@ -166,4 +163,7 @@ footer nav a{
 }
 button{
     margin:0%;
+}
+footer h2{
+    font-size:150%;
 }
