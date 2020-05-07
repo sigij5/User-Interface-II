@@ -17,13 +17,18 @@ margin: 0;
 padding: 0;  
 border: 0;  
 font-size: 100%;  
-font: inherit;  
+font: inherit; 
+color: goldenrod; 
 vertical-align: baseline;  
 box-sizing:border-box;
 font-family:'EB Garamond', serif;
 }
 
 /*general styles*/
+#title{
+    font-size:300%;
+    color: goldenrod;
+}
 body{
     line-height:1.5;
     background-color: black;
@@ -54,9 +59,7 @@ header{
     display:flex;
     flex-direction:column;
     background-color: grey;
-}
-header h1{
-    font-size: large;
+    position: sticky;
 }
 header nav{
     display:flex;
@@ -77,16 +80,20 @@ header nav a:hover{
     display:flex;
     margin: 4%;
     flex-flow:row wrap;
-    justify-content: space-around;
+    justify-content:center;
 }
 #headshot{
     width:40%;
     height:100%;
     display:flex;
+    margin-right:0px;
 }
 #headshot img{
     object-fit: contain;
     width:80%;
+}
+div.maintext h2{
+    font-size: 200%;
 }
 .maintext{
     width:40%;
@@ -94,9 +101,7 @@ header nav a:hover{
     flex-flow:column wrap;
     align-items:flex-start;
     justify-content: flex-end;
-}
-.maintext a{
-    width:40%;
+    margin-left:0px;
 }
 #description{
     width:50%;
@@ -106,30 +111,30 @@ header nav a:hover{
 
 
 /*section 2 styles*/
-.section2{
+section.section2{
+    height:40%;
     display:flex;
     flex-flow:row wrap;
-    justify-content:space-around;
+    justify-content:space-between;
 }
-.section2 div{
-    /* width:150px;
-    height:150px;
-    margin:20px; */
-    width:20%;
-}
-
-
-/*section 3 styles*/
-.section3{
+/*this solution works*/
+section.section2 div{
+    width:25%;
     display:flex;
+    flex-flow: column-reverse wrap;
+    align-items:center;
+    margin-bottom:5%; 
+ } 
+
+section.section2 img{
+    width: 200px;
+    height: 200px; 
+}
     flex-flow:row wrap;
-    justify-content:space-around;
+    margin: 5% 0% 0% 0%;
 }
 .section3 div{
-    /* width:150px;
-    height:200px;*/
-    margin:20px 20px 0px 20px;
-    width:20%;
+    width:18%;
 }
 div.projects img{
     object-fit: contain;
@@ -138,14 +143,8 @@ div.projects img{
 }
 .section3 div.projects{
     display:flex;
-    flex-direction: row;
-}
-.section3 div.projects p{
-    width: 10%;
-    display:flex;
-    justify-content: flex-end;
-    text-align: right;
-}
+    flex-direction: row-reverse;
+} */
 
 
 
@@ -155,8 +154,6 @@ footer{
     background-color: grey;
     display:flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
 }
 footer div{
     text-align: center;
@@ -167,7 +164,6 @@ footer div{
 footer nav a{
     color:Cyan;
 }
-footer .button{
-    padding:0%;
+button{
     margin:0%;
 }
