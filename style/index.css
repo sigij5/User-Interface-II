@@ -16,7 +16,7 @@ time, mark, audio, video {
 margin: 0;  
 padding: 0;  
 border: 0;  
-font-size: 100%;  
+font-size: 62.5%;  
 font: inherit; 
 color: goldenrod; 
 vertical-align: baseline;  
@@ -26,7 +26,7 @@ font-family:'EB Garamond', serif;
 
 /*general styles*/
 header h1{
-    font-size:300%;
+    font-size:3rem;
 }
 body{
     line-height:1.5;
@@ -34,7 +34,7 @@ body{
     color:white;
 }
 p{
-    font-size: small;
+    font-size: 1.6rem;
 }
 nav.header a{
     background-color:darkgreen;
@@ -57,8 +57,10 @@ cursor:pointer;
 header{
     display:flex;
     flex-direction:column;
-    background-color: grey;
-    position: sticky;
+    background-image:url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9& auto=format&fit=crop&w=900&q=60');
+    background-size:stretch;
+    background-repeat: no-repeat;
+
 }
 header nav{
     display:flex;
@@ -77,22 +79,23 @@ header nav a:hover{
 
 .section1{
     display:flex;
-    margin: 4%;
+    margin:2% 0%;
     flex-flow:row wrap;
-    justify-content:center;
+    border:1px solid green;
 }
-#headshot{
+.section1 div{
+    border:1px solid red;
+}
+div#headshot{
     width:40%;
     height:100%;
     display:flex;
-    margin-right:0px;
 }
 #headshot img{
     object-fit: contain;
-    width:80%;
 }
 div.maintext h2{
-    font-size: 200%;
+    font-size: 2rem;
 }
 .maintext{
     width:40%;
@@ -103,7 +106,7 @@ div.maintext h2{
     margin-left:0px;
 }
 #description{
-    width:50%;
+    width:100%;
     object-fit: contain;
     max-height: 100%;
 }
@@ -116,7 +119,6 @@ section.section2{
     flex-flow:row wrap;
     justify-content:space-between;
 }
-/*this solution works*/
 section.section2 div{
     width:25%;
     display:flex;
@@ -125,25 +127,10 @@ section.section2 div{
     margin-bottom:5%; 
  } 
 
-section.section2 img{
+.section2 div img{
     width: 200px;
     height: 200px; 
 }
-    flex-flow:row wrap;
-    margin: 5% 0% 0% 0%;
-}
-.section3 div{
-    width:18%;
-}
-div.projects img{
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 80%;
-}
-.section3 div.projects{
-    display:flex;
-    flex-direction: row-reverse;
-} 
 
 /*footer styles*/
 
@@ -165,5 +152,5 @@ button{
     margin:0%;
 }
 footer h2{
-    font-size:150%;
+    font-size:2rem;
 }
