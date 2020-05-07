@@ -24,27 +24,50 @@ box-sizing:border-box;
 font-family:'EB Garamond', serif;
 }
 
+/*skip navigation link*/
+a#skip{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+a#skip:focus{
+    position:static;
+    width:auto;
+    height:auto;
+}
+
 /*general styles*/
+html{
+    background-image:url('https://images.unsplash.com/photo-1528819027803-5473f2bf7633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2978&q=80://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9& auto=format&fit=crop&w=900&q=60');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 header h1{
     font-size:3rem;
 }
 body{
     line-height:1.5;
-    background-color: black;
     color:white;
 }
 p{
     font-size: 1.6rem;
 }
 nav.header a{
-    background-color:darkgreen;
+    background-color:black;
+    border:1px solid silver;
+    width:10%;
 }
 nav.header a:hover{
-    background-color:lightgreen;
+    background-color:grey;
     cursor: pointer;
 }
-a{
+a.navbar{
     padding:1%;
+    text-align: center;
 }
 .button button{
 cursor:pointer;
@@ -57,23 +80,12 @@ cursor:pointer;
 header{
     display:flex;
     flex-direction:column;
-    background-image:url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9& auto=format&fit=crop&w=900&q=60');
-    background-size:stretch;
-    background-repeat: no-repeat;
-
+    background-color:midnightblue;
 }
 header nav{
     display:flex;
-    height: 5vh;
+    align-items: center;
 }
-header nav a{
-    background-color:darkgreen;
-    border: 2px solid red;
-}
-header nav a:hover{
-    background-color:lightgreen;
-}
-
 
 /*section 1 styles*/
 
@@ -81,18 +93,18 @@ header nav a:hover{
     display:flex;
     margin:2% 0%;
     flex-flow:row wrap;
-    border:1px solid green;
-}
-.section1 div{
-    border:1px solid red;
 }
 div#headshot{
+    padding:3% 3% 0% 1%;
     width:40%;
-    height:100%;
     display:flex;
+    justify-content: center;
 }
 #headshot img{
-    object-fit: contain;
+    display:flex;
+    width:auto;
+    max-width:100%;
+    object-fit: fill;
 }
 div.maintext h2{
     font-size: 2rem;
@@ -103,7 +115,7 @@ div.maintext h2{
     flex-flow:column wrap;
     align-items:flex-start;
     justify-content: flex-end;
-    margin-left:0px;
+    margin-left:0%;
 }
 #description{
     width:100%;
@@ -112,30 +124,39 @@ div.maintext h2{
 }
 
 
-/*section 2 styles*/
+/*section2 project gallery styles*/
+.section2 div img:hover{
+    cursor:pointer;
+    min-height:90%;
+    min-width:90%;
+    }
 section.section2{
-    height:40%;
     display:flex;
     flex-flow:row wrap;
-    justify-content:space-between;
+    justify-content:space-around;
+    max-height: 50%;
 }
 section.section2 div{
-    width:25%;
+    padding:3% 0% 3% 3%;
+    min-width:25%;
+    max-height:50%;
     display:flex;
     flex-flow: column-reverse wrap;
-    align-items:center;
-    margin-bottom:5%; 
+    justify-content: center;
+    align-items: center;
+    flex:1;
  } 
 
 .section2 div img{
-    width: 200px;
-    height: 200px; 
+    max-width: 100%;
+    min-height:80%;
+    max-height:80%;
 }
 
 /*footer styles*/
 
 footer{
-    background-color:grey;
+    background-color:midnightblue;
     display:flex;
     flex-direction: column;
 }
@@ -153,4 +174,79 @@ button{
 }
 footer h2{
     font-size:2rem;
+}
+
+
+/*media queries*/
+@media(max-width:940px){
+    #description{
+        font-size: 1rem;
+    }
+    div.maintext h2{
+        font-size:2rem;
+    }
+}
+@media(max-width:800px){
+    .section2 div img{
+        max-width: 100%;
+        min-height:80%;
+        max-height:80%;
+    }
+    #headshot img{
+        object-fit: contain;
+    }
+}
+
+
+
+@media(max-width:500px){
+    nav.header a{
+        width:25%;
+    }
+    .section1{
+        flex-flow:column wrap;
+        align-items: center;
+    }
+    .section1 div{
+        width:90%;
+        padding: 0% 3%;
+    }
+    .section1 div.maintext{
+        align-items: center;
+    }
+    section.section2{
+        display:flex;
+        flex-flow:column wrap;
+        justify-content:space-around;
+        align-items: center;
+    }
+    section.section2 div{
+        padding:10%;
+    }
+}
+
+@media(max-width:360px){
+    .section1 div{
+        border:1px solid green;
+        }
+    div#headshot{
+        width:80%;
+    }
+}
+
+@media(min-width:1300px){
+    div#headshot{
+        padding:3% 3% 0% 3%;
+        width:30%;
+    }
+    .maintext{
+        width:60%;
+    }
+}
+
+@media(min-width:1920px){
+    .header a{
+        width:25%;
+        text-align: center;
+    }
 }
