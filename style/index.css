@@ -48,6 +48,7 @@ html{
 }
 header h1{
     font-size:3rem;
+    padding-left: 1%;
 }
 body{
     line-height:1.5;
@@ -241,6 +242,9 @@ footer h2{
     }
     .maintext{
         width:60%;
+    }
+    .button{
+        width:20%;
     }
 }
 
