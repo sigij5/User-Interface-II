@@ -40,11 +40,21 @@ a#skip:focus{
 }
 
 /*general styles*/
+
 html{
-    background-image:url('https://images.unsplash.com/photo-1528819027803-5473f2bf7633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2978&q=80://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9& auto=format&fit=crop&w=900&q=60');
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image:url('https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60');
+
+    /* background-image:url('https://images.unsplash.com/photo-1528819027803-5473f2bf7633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2978&q=80://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9& auto=format&fit=crop&w=900&q=60'); */
+    background-size: auto;
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    
+    animation: animatedBackground 40s linear infinite;
+}
+@keyframes animatedBackground{
+    from {background-position: 0 0;}
+    to {background-position:100% 0;}
 }
 header h1{
     font-size:3rem;
@@ -73,11 +83,15 @@ a.navbar{
 div.maintext .button button{
 cursor:pointer;
 }
-.button button{
-    background-color: teal;
+.button{
+    background-color: #364652;
+    border-radius: 10%;
+    padding:0.5%;
+    border:1px solid goldenrod;
 }
-.button button:hover{
+.button:hover{
     cursor:pointer;
+    opacity: 80%;
 }
 
 /*header styles*/
@@ -85,7 +99,6 @@ header, footer{
     display:flex;
     flex-direction:column;
     background-image:url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
-    /* background-color:midnightblue; */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -103,16 +116,22 @@ header, footer{
     padding-left: 1%;
 }
 div#headshot{
-    padding:3% 3% 0% 1%;
+    margin:3% 3% 0% 3%;
     width:40%;
     display:flex;
     justify-content: center;
+    border:
 }
 #headshot img{
     display:flex;
     width:auto;
     max-width:100%;
     object-fit: fill;
+    filter: grayscale(100%);
+}
+#headshot img:hover{
+    cursor:pointer;
+    filter: grayscale(0%);
 }
 div.maintext h2{
     font-size: 2rem;
@@ -130,35 +149,45 @@ div.maintext h2{
     object-fit: contain;
     max-height: 100%;
 }
-
+div.myprojects{
+    width:100%;
+    display:flex;
+}
+.button1{
+    width:100%;
+    padding:1%;
+}
 
 /*section2 project gallery styles*/
 .section2 div img:hover{
     cursor:pointer;
-    min-height:85%;
-    min-width:85%;
+    filter: grayscale(0%);
     }
 section.section2{
     display:flex;
     flex-flow:row wrap;
     justify-content:space-around;
-    max-height: 50%;
+    height: 40%;
 }
 section.section2 div{
-    padding:3%;
-    min-width:25%;
+    margin:3%;
+    min-width:15%;
     max-height:50%;
+    min-height:90%;
     display:flex;
     flex-flow: column-reverse nowrap;
-    justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
     flex:1;
+    overflow:hidden
  } 
 
 .section2 div img{
-    max-width: 100%;
-    min-height:80%;
-    max-height:80%;
+    max-width:100%;
+    max-height:100%;
+    min-height:90%;
+    object-fit: fill;
+    filter: grayscale(100%);
 }
 
 /*footer styles*/
@@ -173,17 +202,33 @@ footer div{
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    justify-content: space-evenly;
 }
 footer nav a{
     color:Cyan;
 }
-button{
-    margin:0%;
+.button2{
+    width:0.5%;
+    padding:1%;
+    background-color: teal;
 }
 footer h2{
     font-size:2rem;
+    margin-bottom: 1% 0%;
 }
 
+/*social media icons */
+.fa {
+    padding: 1%;
+    font-size: 1rem;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
 
 /*media queries*/
 @media(max-width:940px){
@@ -198,9 +243,15 @@ footer h2{
     div.maintext{
         width:60%;
     }
+    section.section2 div{
+        min-width:40%;
+    }
 }
 
 @media(max-width:500px){
+    html{
+        animation: animatedBackground 100s linear infinite;
+    }
     nav.header a{
         width:25%;
     }
@@ -218,11 +269,14 @@ footer h2{
     .maintext p{
         text-align: center;
     }
+    div.myprojects{
+        display: flex;
+        justify-content:center;
+    }
     section.section2{
         display:flex;
         flex-flow:column wrap;
         justify-content:space-around;
-        align-items: center;
     }
     section.section2 div{
         padding:10%;
@@ -236,12 +290,21 @@ footer h2{
     div#headshot{
         width:80%;
     }
+
+}
+@media(max-width:800px){
+    div.maintext{
+        width:50%;
+    }
+    section.section1{
+        justify-content: space-between;
+    }
 }
 
 @media(min-width:1024px){
     div#headshot{
         padding:3% 3% 0% 3%;
-        width:40%;
+        width:30%;
     }
     .maintext{
         width:60%;
