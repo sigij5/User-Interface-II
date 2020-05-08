@@ -70,11 +70,14 @@ a.navbar{
     padding:1%;
     text-align: center;
 }
-.button button{
+div.maintext .button button{
 cursor:pointer;
 }
-.button{
-    background-color: inherit;
+.button button{
+    background-color: teal;
+}
+.button button:hover{
+    cursor:pointer;
 }
 
 /*header styles*/
@@ -94,6 +97,7 @@ header nav{
     display:flex;
     margin:2% 0%;
     flex-flow:row wrap;
+    padding-left: 1%;
 }
 div#headshot{
     padding:3% 3% 0% 1%;
@@ -128,8 +132,8 @@ div.maintext h2{
 /*section2 project gallery styles*/
 .section2 div img:hover{
     cursor:pointer;
-    min-height:90%;
-    min-width:90%;
+    min-height:85%;
+    min-width:85%;
     }
 section.section2{
     display:flex;
@@ -138,11 +142,11 @@ section.section2{
     max-height: 50%;
 }
 section.section2 div{
-    padding:3% 0% 3% 3%;
+    padding:3%;
     min-width:25%;
     max-height:50%;
     display:flex;
-    flex-flow: column-reverse wrap;
+    flex-flow: column-reverse nowrap;
     justify-content: center;
     align-items: center;
     flex:1;
@@ -188,17 +192,10 @@ footer h2{
     }
 }
 @media(max-width:800px){
-    .section2 div img{
-        max-width: 100%;
-        min-height:80%;
-        max-height:80%;
-    }
-    #headshot img{
-        object-fit: contain;
+    div.maintext{
+        width:60%;
     }
 }
-
-
 
 @media(max-width:500px){
     nav.header a{
@@ -215,6 +212,9 @@ footer h2{
     .section1 div.maintext{
         align-items: center;
     }
+    .maintext p{
+        text-align: center;
+    }
     section.section2{
         display:flex;
         flex-flow:column wrap;
@@ -224,21 +224,21 @@ footer h2{
     section.section2 div{
         padding:10%;
     }
+    header h1{
+        text-align: center;
+    }
 }
 
 @media(max-width:360px){
-    .section1 div{
-        border:1px solid green;
-        }
     div#headshot{
         width:80%;
     }
 }
 
-@media(min-width:1300px){
+@media(min-width:1024px){
     div#headshot{
         padding:3% 3% 0% 3%;
-        width:30%;
+        width:40%;
     }
     .maintext{
         width:60%;
@@ -248,7 +248,7 @@ footer h2{
     }
 }
 
-@media(min-width:1920px){
+@media(min-width:1620px){
     .header a{
         width:25%;
         text-align: center;
