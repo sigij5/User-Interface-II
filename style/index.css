@@ -72,6 +72,12 @@ nav.header a{
     border:1px solid silver;
     width:10%;
 }
+
+nav.header{
+    border:1px solid pink;
+}
+
+
 nav.header a:hover{
     background-color:grey;
     cursor: pointer;
@@ -88,10 +94,19 @@ cursor:pointer;
     border-radius: 10%;
     padding:0.5%;
     border:1px solid goldenrod;
+    text-align: center;
 }
 .button:hover{
     cursor:pointer;
     opacity: 80%;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.maincontent{
+    padding: 3%;
+    border:1px solid green;
 }
 
 /*header styles*/
@@ -111,16 +126,14 @@ header, footer{
 
 .section1{
     display:flex;
-    margin:2% 0%;
-    flex-flow:row wrap;
-    padding-left: 1%;
+    margin-bottom: 3%;
+    border:1px solid red;
 }
 div#headshot{
-    margin:3% 3% 0% 3%;
     width:40%;
     display:flex;
     justify-content: center;
-    border:
+    border:1px solid pink;
 }
 #headshot img{
     display:flex;
@@ -142,7 +155,6 @@ div.maintext h2{
     flex-flow:column wrap;
     align-items:flex-start;
     justify-content: flex-end;
-    margin-left:0%;
 }
 #description{
     width:100%;
@@ -152,10 +164,6 @@ div.maintext h2{
 div.myprojects{
     width:100%;
     display:flex;
-}
-.button1{
-    width:100%;
-    padding:1%;
 }
 
 /*section2 project gallery styles*/
@@ -167,25 +175,25 @@ section.section2{
     display:flex;
     flex-flow:row wrap;
     justify-content:space-around;
-    height: 40%;
+    height: 60%;
+    border:1px solid red;
 }
 section.section2 div{
-    margin:3%;
-    min-width:15%;
-    max-height:50%;
-    min-height:90%;
+    min-width:25%;
+    padding:3% 3% 2% 0%;
     display:flex;
     flex-flow: column-reverse nowrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex:1;
     overflow:hidden
  } 
 
 .section2 div img{
+    min-width: 100%;
     max-width:100%;
     max-height:100%;
-    min-height:90%;
+    min-height:100%;
     object-fit: fill;
     filter: grayscale(100%);
 }
@@ -196,13 +204,10 @@ footer{
     background-color:midnightblue;
     display:flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 footer div{
     text-align: center;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    justify-content: space-evenly;
 }
 footer nav a{
     color:Cyan;
@@ -214,7 +219,6 @@ footer nav a{
 }
 footer h2{
     font-size:2rem;
-    margin-bottom: 1% 0%;
 }
 
 /*social media icons */
@@ -245,6 +249,18 @@ footer h2{
     }
     section.section2 div{
         min-width:40%;
+    }
+    nav.header a{
+        width:25%;
+    }
+    .button{
+        padding:2%;
+    }
+    footer div{
+        margin-bottom: 2%;
+    }
+    header h1{
+        text-align: center;
     }
 }
 
@@ -281,9 +297,6 @@ footer h2{
     section.section2 div{
         padding:10%;
     }
-    header h1{
-        text-align: center;
-    }
 }
 
 @media(max-width:360px){
@@ -303,7 +316,7 @@ footer h2{
 
 @media(min-width:1024px){
     div#headshot{
-        padding:3% 3% 0% 3%;
+        padding:0% 3% 0% 0%;
         width:30%;
     }
     .maintext{
