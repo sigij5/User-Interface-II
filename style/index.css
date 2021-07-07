@@ -1,1 +1,325 @@
 /* Add CSS styling here */
+
+html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+table, caption, tbody, tfoot, thead, tr, th, td,  
+article, aside, canvas, details, embed,  
+figure, figcaption, footer, header, hgroup,  
+menu, nav, output, ruby, section, summary,  
+time, mark, audio, video {  
+margin: 0;  
+padding: 0;  
+border: 0;  
+font-size: 62.5%;  
+font: inherit; 
+color: goldenrod; 
+vertical-align: baseline;  
+box-sizing:border-box;
+font-family:'EB Garamond', serif;
+}
+
+/*skip navigation link*/
+a#skip{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+a#skip:focus{
+    position:static;
+    width:auto;
+    height:auto;
+}
+
+/*general styles*/
+
+html{
+    background-image:url('https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60');
+    background-size: auto;
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    
+    animation: animatedBackground 40s linear infinite;
+}
+@keyframes animatedBackground{
+    from {background-position: 0 0;}
+    to {background-position:100% 0;}
+}
+header h1{
+    font-size:3rem;
+    padding-left: 1%;
+}
+body{
+    line-height:1.5;
+    color:white;
+}
+p{
+    font-size: 1.6rem;
+}
+nav.header a{
+    background-color:black;
+    border:1px solid silver;
+    width:10%;
+}
+
+
+
+nav.header a:hover{
+    background-color:grey;
+    cursor: pointer;
+}
+a.navbar{
+    padding:1%;
+    text-align: center;
+}
+div.maintext .button button{
+cursor:pointer;
+}
+.button{
+    background-color: #364652;
+    border-radius: 10%;
+    padding:0.5%;
+    border:1px solid goldenrod;
+    text-align: center;
+}
+.button:hover{
+    cursor:pointer;
+    opacity: 80%;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.maincontent{
+    padding: 3%;
+}
+
+/*header styles*/
+header, footer{
+    display:flex;
+    flex-direction:column;
+    background-image:url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    header nav{
+    display:flex;
+    align-items: center;
+}
+
+/*section 1 styles*/
+
+.section1{
+    display:flex;
+    margin-bottom: 3%;
+}
+div#headshot{
+    width:40%;
+    display:flex;
+    justify-content: center;
+}
+#headshot img{
+    display:flex;
+    width:auto;
+    max-width:100%;
+    object-fit: fill;
+    filter: grayscale(100%);
+}
+#headshot img:hover{
+    cursor:pointer;
+    filter: grayscale(0%);
+}
+div.maintext h2{
+    font-size: 2rem;
+}
+.maintext{
+    width:40%;
+    display:flex;
+    flex-flow:column wrap;
+    align-items:flex-start;
+    justify-content: flex-end;
+}
+#description{
+    width:100%;
+    object-fit: contain;
+    max-height: 100%;
+}
+div.myprojects{
+    width:100%;
+    display:flex;
+}
+
+/*section2 project gallery styles*/
+.section2 div img:hover{
+    cursor:pointer;
+    filter: grayscale(0%);
+    }
+section.section2{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-around;
+    height: 60%;
+}
+section.section2 div{
+    min-width:25%;
+    padding:3% 3% 2% 0%;
+    display:flex;
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+    justify-content: space-between;
+    flex:1;
+    overflow:hidden
+ } 
+
+.section2 div img{
+    min-width: 100%;
+    max-width:100%;
+    max-height:100%;
+    min-height:100%;
+    object-fit: fill;
+    filter: grayscale(100%);
+}
+
+/*footer styles*/
+
+footer{
+    background-color:midnightblue;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer div{
+    text-align: center;
+}
+footer nav a{
+    color:Cyan;
+}
+.button2{
+    width:0.5%;
+    padding:1%;
+    background-color: teal;
+}
+footer h2{
+    font-size:2rem;
+}
+
+/*social media icons */
+.fa {
+    padding: 1%;
+    width: 1rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+/*media queries*/
+@media(max-width:940px){
+    #description{
+        font-size: 1rem;
+    }
+    div.maintext h2{
+        font-size:2rem;
+    }
+}
+@media(max-width:800px){
+    div.maintext{
+        width:60%;
+    }
+    section.section2 div{
+        min-width:40%;
+    }
+    nav.header a{
+        width:25%;
+    }
+    .button{
+        padding:2%;
+    }
+    footer div{
+        margin-bottom: 2%;
+    }
+    header h1{
+        text-align: center;
+    }
+}
+
+@media(max-width:500px){
+    html{
+        animation: animatedBackground 100s linear infinite;
+    }
+    nav.header a{
+        width:25%;
+    }
+    .section1{
+        flex-flow:column wrap;
+        align-items: center;
+    }
+    .section1 div{
+        width:90%;
+        padding: 0% 3%;
+    }
+    .section1 div.maintext{
+        align-items: center;
+    }
+    .maintext p{
+        text-align: center;
+    }
+    div.myprojects{
+        display: flex;
+        justify-content:center;
+    }
+    section.section2{
+        display:flex;
+        flex-flow:column wrap;
+        justify-content:space-around;
+    }
+    section.section2 div{
+        padding:10%;
+    }
+}
+
+@media(max-width:360px){
+    div#headshot{
+        width:80%;
+    }
+
+}
+@media(max-width:800px){
+    div.maintext{
+        width:50%;
+    }
+    section.section1{
+        justify-content: space-between;
+    }
+}
+
+@media(min-width:1024px){
+    div#headshot{
+        padding:0% 3% 0% 0%;
+        width:30%;
+    }
+    .maintext{
+        width:60%;
+    }
+    .button{
+        width:20%;
+    }
+}
+
+@media(min-width:1620px){
+    .header a{
+        width:25%;
+        text-align: center;
+    }
+}
